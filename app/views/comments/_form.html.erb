@@ -1,13 +1,7 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
-    <p>
-        <%= form.label :commenter %><br>
-        <%= form.text_field :commenter %>
-    </p>
-    <p>
-        <%= form.label :body %><br>
-        <%= form.text_area :body%>
-    </p>
-    <p>
-        <%= form.submit %>
-    </p>
+    <h2 class="font-bold pt-2"><%= form.label :commenter %></h2>
+    <%= form.text_field :commenter, class: "w-full rounded-md" %>
+    <h2 class="font-bold pt-2"><%= form.label :body %></h2>
+    <%= form.text_area :body, class: "w-full rounded-md" %>
+    <p class="pt-4 text-right"><%= form.submit class: "px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 text-white" %></p>
 <% end %>
